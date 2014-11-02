@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141030234517) do
+ActiveRecord::Schema.define(version: 20141031145237) do
 
   create_table "products", force: true do |t|
     t.string   "name"
@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(version: 20141030234517) do
   end
 
   create_table "reviews", force: true do |t|
-    t.integer  "type"
     t.text     "comment"
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "review_type"
   end
 
   add_index "reviews", ["product_id"], name: "index_reviews_on_product_id"
