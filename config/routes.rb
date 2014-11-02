@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'products/add'
   get 'products'  => 'products#index'
   get 'reviews/new'
-  get  '/products/:id/reviews/new'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

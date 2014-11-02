@@ -1,0 +1,17 @@
+
+<h1>Add New Product to be Reviewed</h2>
+<%= form_for @product, :html => {:multipart => true} do |f| %>
+  <div class="field">
+    <%= f.label "Product name" %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Product Image"  %><br>
+    <%= f.file_field :image %>
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

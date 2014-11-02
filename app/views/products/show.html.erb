@@ -1,0 +1,32 @@
+<% require 'httparty' %>
+<p>
+  <strong>Product Name</strong>
+  <%= @product.name %>
+</p>
+ 
+<p>
+  
+  <%=  image_tag(@product.image, :width => 320,:height=>150) if @product.image.present? %>
+</p>
+ <h2>Reviews</h2>
+
+ <% @product.reviews.each do |r| %>
+ 
+ <%=
+ 
+%>
+
+
+
+ <div class="<%= if r.review_type==0 
+    render :text => "alert alert-danger"
+  elsif r.review_type==1
+    render :text => "alert alert-success"
+  elsif r.review_type ==2
+    render :text => "alert alert-warning"
+
+end %>">
+  <%=   r.comment  %></div>
+
+ <% end %>
+

@@ -1,0 +1,35 @@
+<div class="row">
+
+	<%  a = @products.order("created_at DESC") %>
+	<% a.each do  |p| %>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                           <%= image_tag(p.image, :width => 320,:height=>150) if p.image.present? %>
+                            <div class="caption">
+                                <h4 class="pull-right"><%= p.reviews.length %> Review(s)</h4>
+                                <h4><a href="#"><%= p.name %></a>
+                                </h4>
+                                <p><%= p.description %></p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right"><%= link_to "See Reviews", product_path(p) %> | <%= link_to "Add Reviews", new_product_review_path(p) %></p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+   <% end %>
+                   
+
+                </div>
+
+
