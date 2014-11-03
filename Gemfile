@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'carrierwave'
 gem 'httparty'
-gem "rmagick"
+#gem "rmagick"
 
 gem 'pry'
 
