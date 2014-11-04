@@ -1,4 +1,5 @@
 <%= form_for :review,  :url=> {:action => "create" }, :html => { :method => :post } do |f| %>
+
 Review for <%=  %>
 <br>
    <%= f.label "New Comment" %><br>
@@ -7,7 +8,11 @@ Review for <%=  %>
   <p>
     
   </p>
-  <p>
-    <%= f.submit %>
-  
+  <div class="button">
+      <%= f.submit%>
+  </div>
+
+  <div class="button">
+  	<a class="button" href="<%= root_path %>">Back</a>
+  </div>
 <% end %>
