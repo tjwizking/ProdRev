@@ -8,6 +8,10 @@
   
   <%=  image_tag(@product.image, :width => 320,:height=>150) if @product.image.present? %>
 </p>
+
+ <div class="button">
+    <a class="button" href="<%= root_path %>"><b>Back</b></a>
+  </div>
  <h2>Reviews</h2>
 
  <% @product.reviews.each do |r| %>
@@ -27,9 +31,9 @@
 
 end %>">
   <%=   r.comment  %></div>
-
+  <br>
  <% end %>
  <div class="button">
-  	<a class="button" href="<%= root_path %>">Back</a>
+  	<a class="button" href="<%= root_path %>"><b>Back</b></a>
   </div>
 

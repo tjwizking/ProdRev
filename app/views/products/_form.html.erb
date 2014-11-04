@@ -1,5 +1,5 @@
-<div class="button">
-    <a class="button" href="<%= root_path %>">Back</a>
+ <div class="button">
+    <a class="button" href="<%= root_path %>"><b>Back</b></a>
   </div>
 <h1>Add New Product to be Reviewed</h2>
 <%= form_for @product, :html => {:multipart => true} do |f| %>
@@ -14,6 +14,6 @@
   </div><br>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit disable_with: "Submitting..." %>
   </div>
 <% end %>
