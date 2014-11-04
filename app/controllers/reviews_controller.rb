@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-
+#layout "reviewlayout"
 	def new
 		@review = Review.new		
 	end
@@ -22,6 +22,7 @@ def analyseComment(text)
 	ss["label"]
  	
  end
+ 
 
 def create
 

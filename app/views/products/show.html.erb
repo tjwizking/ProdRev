@@ -6,7 +6,7 @@
  
 <p>
   
-  <%=  image_tag(@product.image, :width => 320,:height=>150) if @product.image.present? %>
+  <%=  image_tag(@product.image, :width => 80,:height=>80) if @product.image.present? %>
 </p>
  <h2>Reviews</h2>
 
@@ -18,14 +18,7 @@
 
 
 
- <div class="<%= if r.review_type==0 
-    render :text => "alert alert-danger"
-  elsif r.review_type==1
-    render :text => "alert alert-success"
-  elsif r.review_type ==2
-    render :text => "alert alert-warning"
-
-end %>">
+ <div class="<%= review_class(r) %>">
   <%=   r.comment  %></div>
 
  <% end %>

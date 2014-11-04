@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
-	
+#layout "productlayout" , except: [:index]
   
 def index
+
 	@products = Product.all
 end
 
@@ -56,4 +57,5 @@ def analyseComment(text)
 		def product_params
 			params.require(:product).permit(:name,:image)	
 		end
+
 end
