@@ -10,10 +10,6 @@
 </p>
  <h2>Reviews</h2>
 
- <div class="button">
-  	<a class="button" href="<%= root_path %>">Back</a>
-  </div>
-
  <% @product.reviews.each do |r| %>
  
  <%=
@@ -30,11 +26,10 @@
     render :text => "alert alert-warning"
 
 end %>">
-
   <%=   r.comment  %></div>
 
  <% end %>
-<div class="button">
+ <div class="button">
   	<a class="button" href="<%= root_path %>">Back</a>
   </div>
 
