@@ -5,7 +5,7 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                           <%= image_tag(p.image, :width => 320,:height=>150) if p.image.present? %>
+                           <%= link_to(image_tag(p.image, :width => 320,:height=>150), product_path(p)) if p.image.present? %>
                             <div class="caption">
                                 <h4 class="pull-right"><%= p.reviews.length %> Review(s)</h4>
                                 <h4><a href="#"><%= p.name %></a>
