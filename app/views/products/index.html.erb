@@ -1,6 +1,13 @@
 <div class="row">
 
+ <% if @products.blank? %>
+        <p style="font-size:75px; text-align:center; margin-top:150px" >There are no product reviews</p>
+        <center><button style="font-size:30px; margin-top:50px"><a href="products/add">Add New</a></button></center>
+<% end %>
+
+
 	<%  a = @products.order("created_at DESC") %>
+   
 	<% a.each do  |p| %>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
@@ -31,5 +38,6 @@
                    
 
                 </div>
+
 
 
