@@ -1,9 +1,6 @@
 <%= form_for :review,  :url=> {:action => "create" }, :html => { :method => :post } do |f| %>
 
-<<<<<<< HEAD
-Review for <%=  %>
-=======
->>>>>>> f31fe40e6caaead9c5e68619fd6937377a31e1eb
+ 
 <br>
    <%= f.label "New Review" %><br>
     <%= f.text_field :comment %>
@@ -12,10 +9,12 @@ Review for <%=  %>
     
   </p>
   <div class="button">
-      <%= f.submit%>
+      <%= f.submit disable_with: "Submitting..."%>
   </div>
 
+  <br>
+
   <div class="button">
-  	<a class="button" href="<%= root_path %>">Back</a>
+  	<a class="button" href="<%= root_path %>"><b>Back</b></a>
   </div>
 <% end %>
