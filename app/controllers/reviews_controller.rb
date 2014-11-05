@@ -28,7 +28,7 @@ def create
 
 	@prod = Product.find(params[:product_id])
 	@review = @prod.reviews.new(review_params)
-	
+		if @review.valid?
 	a = analyseComment(@review.comment)
 	if a== "neutral"
 		@review.review_type =2
@@ -38,6 +38,7 @@ def create
 		@review.review_type =0
 	
 	end
+end
 
 	@review.save
     redirect_to root_path

@@ -3,6 +3,20 @@
   </div>
 <h1>Add New Product to be Reviewed</h2>
 <%= form_for @product, :html => {:multipart => true} do |f| %>
+
+<% if @product.errors.any? %>
+<h2>Errors</h2>
+
+<ul>
+  <% @product.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+
+  <% end %>
+</ul>
+
+
+<% end %>
+
   <div class="field">
     <%= f.label "Product name" %><br>
     <%= f.text_field :name %>

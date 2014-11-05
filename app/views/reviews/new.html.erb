@@ -1,4 +1,14 @@
-<%= form_for :review,  :url=> {:action => "create" }, :html => { :method => :post } do |f| %>
+<%= form_for @review, :url=> {:action => "create" } do |f| %>
+<% if @review.errors.any? %>
+<h2>Errors</h2>
+
+<ul>
+  <% @review.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+
+  <% end %>
+
+  <% end %>
 
  
 <br>
